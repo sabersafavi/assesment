@@ -247,13 +247,13 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Ma
 
     @Override
     public void onFailure(String msg) {
-        //Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                mapPresenter.getBikeStationsList();
-//            }
-//        }, 2000);
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mapPresenter.getBikeStationsList();
+            }
+        }, 4000);
 
     }
 }
